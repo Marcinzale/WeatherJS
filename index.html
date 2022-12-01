@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Weather</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <div class="card">
+        <img src="images/weather.png" class="weather-img" alt="Weather image">
+        <div class="container-weather">
+            <Input id="inputCity" class="inputCity" keypress="setQuery()" type="text" placeholder="Select city"></Input>
+            <button id="button" onclick="setCity()">Select</button>
+            <h1 class="title">Weather in: <span id="city"></span></h1>
+            <h2>Current temperature:</h2>
+            <p>Temperature: <span id="temp"></span></p>
+            <p>Feels like: <span id="feels_like"></span></p>
+            <h2>Pressure:</h2>
+            <p id="pressure"> </p>
+        </div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+    <script type='text/javascript' src='./creditentials/config.js'></script>
+
+</body>
+
+</html>
