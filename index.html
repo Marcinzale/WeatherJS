@@ -13,8 +13,13 @@
 
 <body>
     <div class="card">
-        <img src="images/weather.png" class="weather-img" alt="Weather image">
+
         <div class="container-weather">
+            <!-- <h1>Icon: <span id="weather-icon"></span></h1> -->
+            <img src="" id="weather-icon" class="weather-img" alt="Obrazek pogody">
+
+            <p> <span id="description"></span></p>
+
             <Input id="inputCity" class="inputCity" keypress="setQuery()" type="text" placeholder="Select city"></Input>
             <button id="button" onclick="setCity()">Select</button>
             <h1 class="title">Weather in: <span id="city"></span></h1>
