@@ -1,8 +1,3 @@
-// window.onload = function () {
-//     //getWeather();
-//     //onBtnClick();
-
-// }
 
 const input = document.querySelector('inputCity');
 inputCity.addEventListener('keypress', setQuery);
@@ -24,26 +19,22 @@ function getWeather() {
 
             document.getElementById('weather-icon').src = ikona;
             document.getElementById('description').innerHTML = description.toLocaleString('pl');
-            document.getElementById('temp').innerHTML = temp.toLocaleString('pl').slice(0, 4) + " ºC";
-            document.getElementById('feels_like').innerHTML = feels_like.toLocaleString('pl').slice(0, 5) + " ºC";
+            document.getElementById('temp').innerHTML = temp.toFixed(0) + " ºC";
+            document.getElementById('feels_like').innerHTML = feels_like.toFixed(0) + " ºC";
             document.getElementById('pressure').innerHTML = pressure.toLocaleString('pl') + " hPa";
         })
-
-    // setTimeout(getWeather, 3600000) // update every 1 hour
 }
 
 function setQuery(evt) {
     document.getElementById('inputCity');
     if (evt.keyCode == 13) {
         document.getElementById('city').innerHTML = inputCity.value;
-        // console.log(inputCity.value);
         getWeather();
     }
 
 }
 function setCity() {
-    document.getElementById("city");
+    document.getElementById('city');
     document.getElementById('city').innerHTML = inputCity.value;
-    // console.log(inputCity.value);
     getWeather();
 }
